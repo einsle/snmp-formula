@@ -21,13 +21,13 @@ RedHat:
     optionstrap: /etc/sysconfig/snmptrapd
     sourceoptions: salt://snmp/files/snmpd.options
     sourceoptionstrap: salt://snmp/files/snmptrapd.options
-    snmpdargs: -Lsd -Lf /dev/null -p /var/run/snmpd.pid -a
+    snmpdargs: -LS5d -Lf /dev/null -p /var/run/snmpd.pid -a
 Debian:
     pkg: snmpd
     pkgutils: snmp
     configdefault: /etc/default/snmpd
     sourcedefault: salt://snmp/files/snmpd.default
-    snmpdargs: -Lsd -Lf /dev/null -u snmp -g snmp -I -smux,mteTrigger,mteTriggerConf -p /var/run/snmpd.pid
+    snmpdargs: -LS5d -Lf /dev/null -u snmp -g snmp -I -smux,mteTrigger,mteTriggerConf -p /var/run/snmpd.pid
     mibs:
     snmpdrun: "yes"
     trapdrun: "no"
